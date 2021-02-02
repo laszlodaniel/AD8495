@@ -21,7 +21,7 @@
 #define TC_PIN        A0     // must be analog input pin
 #define ADC_MAX_VALUE 1023   // 10-bit ADC, 2^10 - 1 = 1023
 #define ADC_REF_V     5.0886 // supply voltage, the more accurate the better
-#define AMP_REF_V     1.239  // reference voltage measured on the amplifier board, nominally 1.25V, but the more accurate the better
+#define AMP_REF_V     1.239  // reference voltage measured on the amplifier breakout board, nominally 1.25V, but the more accurate the better
 
 uint32_t previousMillis = 0;
 uint32_t currentMillis = 0;
