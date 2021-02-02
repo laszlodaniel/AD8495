@@ -1,0 +1,15 @@
+#######################################
+# Data types (KEYWORD1)
+#######################################
+AD8495	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+readVoltage	KEYWORD2
+readCelsius	KEYWORD2
+readFahrenheit	KEYWORD2
+
+#######################################
+# Literals (LITERAL1)
+#######################################

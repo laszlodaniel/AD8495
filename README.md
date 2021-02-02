@@ -1,2 +1,3 @@
-# AD8495
- Arduino library for the AD8495 analog thermocouple amplifier.
+# AD8495 Arduino library
+
+Arduino library for the AD8495 analog thermocouple amplifier.
