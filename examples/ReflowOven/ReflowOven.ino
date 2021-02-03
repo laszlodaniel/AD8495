@@ -39,7 +39,7 @@ void loop()
 {
     currentMillis = millis();
 
-    if ((currentMillis - previousMillis) >= interval)
+    if ((uint32_t)(currentMillis - previousMillis) >= interval)
     {
         previousMillis = currentMillis;
         ovenTemperature = thermocouple.readCelsius();
