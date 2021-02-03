@@ -20,6 +20,7 @@
 
 #define TC_PIN        A0     // must be analog input pin
 #define ADC_MAX_VALUE 1023   // 10-bit ADC, 2^10 - 1 = 1023
+#define ADC_SAMPLES   128    // ADC sample count
 #define ADC_REF_V     5.0886 // supply voltage, the more accurate the better
 #define AMP_REF_V     1.239  // reference voltage measured on the amplifier breakout board, nominally 1.25V, but the more accurate the better
 
@@ -28,7 +29,7 @@ uint32_t currentMillis = 0;
 uint16_t interval = 1000; // ms
 float ovenTemperature = 0;
 
-AD8495 thermocouple(TC_PIN, ADC_MAX_VALUE, ADC_REF_V, AMP_REF_V);
+AD8495 thermocouple(TC_PIN, ADC_MAX_VALUE, ADC_SAMPLES, ADC_REF_V, AMP_REF_V);
 
 void setup()
 {

@@ -24,7 +24,7 @@
 class AD8495
 {
     public:
-        AD8495(uint8_t analogPin, uint16_t adcMaxValue = 1023, float adcRefV = 5.0, float ampRefV = 1.25);
+        AD8495(uint8_t analogPin, uint16_t adcMaxValue = 1023, uint16_t numSamples = 128, float adcRefV = 5.0, float ampRefV = 1.25);
         float readVoltage(void);
         float readCelsius(void);
         float readFahrenheit(void);
@@ -32,12 +32,13 @@ class AD8495
     private:
         uint8_t _analogPin;
         uint16_t _adcMaxValue = 1023;
+        uint16_t _numSamples = 128;
         float _adcRefV = 5.0;
         float _ampRefV = 1.25;
         float _voltage = 0;
         float _celsius = 0;
         float _fahrenheit = 0;
-        void readADC(uint16_t numSamples);
+        void readADC();
 };
 
 #endif
