@@ -18,10 +18,11 @@
 
 #include <AD8495.h>
 
-AD8495::AD8495(uint8_t analogPin, uint16_t adcMaxValue, uint16_t numSamples, float adcRefV, float ampRefV)
+AD8495::AD8495(uint8_t analogPin, uint8_t adcBitsWidth, uint16_t numSamples, float adcRefV, float ampRefV)
 {
     _analogPin = analogPin;
-    _adcMaxValue = adcMaxValue;
+    _adcBitsWidth = adcBitsWidth;
+    _adcMaxValue = pow(2, _adcBitsWidth) - 1;
     _numSamples = numSamples;
     _adcRefV = adcRefV;
     _ampRefV = ampRefV;
